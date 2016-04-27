@@ -1,0 +1,9 @@
+@mixin box-shadow($parametrs){
+    -webkit-box-shadow:$parametrs;
+    box-shadow: $parametrs
+}
+
+@mixin transition($parametrs) {
+    -webkit-transition: $parametrs;
+    transition: $parametrs;
+}

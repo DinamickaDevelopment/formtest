@@ -1,0 +1,35 @@
+@media (max-width: 992px) {
+    .save_btn, .cancel_btn {
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    input[type="date"]{
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .userWrapper {
+        text-align: center!important;
+    }
+    #subData {
+        height: initial;
+        margin: 0;
+    }
+    #generalData {
+        height: initial;
+        text-align: center;
+    }
+}
+@media(max-width:768px){
+    header{
+        div{
+            text-align: center;
+        }
+        
+    }
+    .edit_btn{
+       margin:5% auto!important;
+    }
+}

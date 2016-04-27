@@ -1,0 +1,44 @@
+.text_setings {
+    font-family: $font;
+    font-size: $fSize;
+    color: $fcolor;
+    font-weight: $fweight;
+}
+.btn{
+    width:$btnwidth;
+    height:$btnheight;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: $btnheight;
+    text-align: center;
+    background-color: white;
+    cursor:pointer;
+    @extend .text_setings;
+    &:hover{
+        background-color: $btnHoverbgcolor;
+        color:$btnHovercolor;
+    }
+}
+header {
+    height: 15%;
+    width: 100%;
+
+    h1 {
+    @extend .text_setings;
+    font-size:40px;
+    display:block;
+    margin: 4% 0 2%;
+    letter-spacing: -1px;
+    }
+    div.container{
+        border-bottom: 1px solid lightgray;
+    }
+
+    div.btn_holder {
+        div{
+            @extend .btn;
+            margin:15% auto;
+        }
+    }
+}
+

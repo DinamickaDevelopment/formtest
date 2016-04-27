@@ -1,0 +1,152 @@
+#usersData {
+    width: 100%;
+}
+
+#subscribe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    .border-bottom {
+        border-bottom: 1px solid lightgray;
+        .row {
+            margin: 1% 0;
+        }
+    }
+}
+
+.wrapper {
+    width: 96%;
+    height: initial;
+    padding-bottom: 5%;
+    position: absolute;
+    z-index: 2;
+    top: 2%;
+    left: 2%;
+    background-color: white;
+    .border-right {
+        border-right: 1px solid lightgray;
+    }
+    div.title {
+        @extend .text_setings;
+        width: 100%;
+        padding: 1% 0;
+        text-align: center;
+    }
+    .cancel_btn {
+        @extend .btn;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .save_btn {
+        @extend .btn;
+        font-size: 16px;
+        color: blue;
+        font-weight: 300;
+    }
+    .appform {
+        @extend .text_setings;
+        font-size: 30px;
+        padding: 5% 10%;
+    }
+}
+
+form {
+    width: 70%;
+    margin: 0 auto;
+    input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="tel"], input[type="number"] {
+        border: 0;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        &:focus+label {
+            bottom: 25px;
+            color: $focuscolor;
+        }
+        &:focus {
+            outline: 0;
+            border-color: $focuscolor;
+        }
+    }
+    input[type="radio"] {
+        
+        display: none;
+        &:checked+.radio_label {
+            color: black;
+            &:after {
+                display: block;
+            }
+        }
+    }
+    input[type="date"]{
+        border: 0;
+        width: 60%;
+        border-bottom: 1px solid lightgray;
+        &:focus{
+            outline:0;
+            border-color:$focuscolor; 
+        }        
+        &:focus+label{
+            color:$focuscolor;
+        }
+        &+label{
+            bottom:25px;
+        }
+    }
+    label {
+        @extend .text_setings;
+        cursor:pointer;
+        color: lightgray;
+        position: absolute;
+        bottom: 0px;
+        margin: 0;
+        left: 15px;
+        @include transition(bottom .3s linear)
+    }
+    .focused {
+        bottom: 25px;
+        color: $focuscolor;
+    }
+    .row>div {
+        text-align: center;
+        height: 55px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .radio_holder {
+        display: inline-block;
+        width: 40%;
+        position: relative;
+    }
+    .error{
+        @extend .text_setings;
+        color:#f27272;
+    }
+}
+
+.radio_psevdo {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+.radio_label:before {
+    content: '';
+    @extend .radio_psevdo;
+    border: 1px solid lightgray;
+}
+
+.radio_label:after {
+    content: '\2713';
+    @extend .radio_psevdo;
+    background-color: $focuscolor;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 100;
+    display: none;
+}

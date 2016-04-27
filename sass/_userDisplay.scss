@@ -1,0 +1,50 @@
+
+#generalData{
+    @include box-shadow($shadowparam);
+    height: $height-user;
+    width:$width-user;
+    margin: $margin-user;
+    padding: $padding-user;
+    background-color: $bgcolor-user;
+    text-align: left;
+    #value_name{
+        @extend .text_setings;
+        font-size: $fSize*2;
+        padding: 6% 0;
+    }
+    #value_birthday{
+        @extend .text_setings;
+    }
+    #value_email{
+        @extend .text_setings;
+    }
+}
+#subData{
+    @include box-shadow($shadowparam);
+    height: $height-user;
+    width:$width-user;
+    margin: $margin-user;
+    padding: 1% 0;
+    background-color: $bgcolor-user;
+    .userWrapper{
+        text-align: right;
+        float: left;
+        width:100%;
+        #value_url{
+           @extend .text_setings; 
+        }
+        #value_phone{
+            @extend .text_setings;
+        }
+        #value_skill{
+            @extend .text_setings;
+        }
+        #value_gender{
+            @extend .text_setings;
+        }
+    }
+    #value_description{
+        float: left;
+        @extend .text_setings;
+    }
+}
